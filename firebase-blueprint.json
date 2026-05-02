@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "AudioGeneration": {
+      "title": "Audio Generation",
+      "description": "Storage for generated audio metadata.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "text": { "type": "string" },
+        "audioUrl": { "type": "string" },
+        "voice": { "type": "string" },
+        "ambientSound": { "type": "string" },
+        "effects": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "text", "audioUrl", "voice", "createdAt"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User info.",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string" }
+      },
+      "required": ["email"]
+    }
+  },
+  "firestore": {
+    "/generations/{generationId}": {
+      "schema": "AudioGeneration",
+      "description": "Historical generations."
+    },
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile data."
+    }
+  }
+}

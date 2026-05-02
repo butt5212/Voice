@@ -1,0 +1,6 @@
+{
+  "name": "VoiceGen AI",
+  "description": "A modern AI-powered mobile application for high-quality Text-to-Speech (TTS), real-time Speech-to-Text (STT), voice effects, and AI-driven audio enhancement.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["AI Voice Generation", "Speech Recognition", "Audio Processing"]
+}
